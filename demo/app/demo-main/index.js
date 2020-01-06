@@ -161,6 +161,7 @@ export default class App extends Component {
         itemsSorted
         itemTouchSendsClick={false}
         stackItems
+        bgcolor={"green"}
         itemHeightRatio={0.75}
         defaultTimeStart={defaultTimeStart}
         defaultTimeEnd={defaultTimeEnd}
@@ -175,6 +176,14 @@ export default class App extends Component {
         onItemDoubleClick={this.handleItemDoubleClick}
         onTimeChange={this.handleTimeChange}
         moveResizeValidator={this.moveResizeValidator}
+        groupRenderer={({ group }) => {
+          return (
+            <div className="custom-group">
+              <span className="title">{group.title}</span>
+              <p className="tip">YO</p>
+            </div>
+          )
+        }}
       >
         <TimelineMarkers>
           <TodayMarker />

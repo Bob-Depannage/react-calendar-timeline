@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import moment from 'moment'
 
+moment.locale('fr');
+
 import Items from './items/Items'
 import Sidebar from './layout/Sidebar'
 import Columns from './columns/Columns'
@@ -83,6 +85,7 @@ export default class ReactCalendarTimeline extends Component {
     groupRenderer: PropTypes.func,
 
     style: PropTypes.object,
+    bgcolor: PropTypes.string,
 
     keys: PropTypes.shape({
       groupIdKey: PropTypes.string,
@@ -937,8 +940,9 @@ export default class ReactCalendarTimeline extends Component {
         return headerRenderer
       }
     }
+
     return (
-      <TimelineHeaders>
+      <TimelineHeaders bgcolor={this.props.bgcolor}>
         <DateHeader unit="primaryHeader" />
         <DateHeader />
       </TimelineHeaders>

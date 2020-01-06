@@ -12,6 +12,7 @@ class TimelineHeaders extends React.Component {
     style: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
+    bgcolor: PropTypes.string,
     calendarHeaderStyle: PropTypes.object,
     calendarHeaderClassName: PropTypes.string,
     headerRef: PropTypes.func
@@ -81,11 +82,12 @@ class TimelineHeaders extends React.Component {
     if (!rightSidebarHeader && this.props.rightSidebarWidth) {
       rightSidebarHeader = <SidebarHeader variant="right" />
     }
+    
     return (
       <div
         ref={this.handleRootRef}
         data-testid="headerRootDiv"
-        style={this.getRootStyle()}
+        style={Object.assign(this.getRootStyle(), { backgroundColor: this.props.bgcolor })}
         className={classNames('rct-header-root', this.props.className)}
       >
         {leftSidebarHeader}
@@ -111,7 +113,8 @@ const TimelineHeadersWrapper = ({
   style,
   className,
   calendarHeaderStyle,
-  calendarHeaderClassName
+  calendarHeaderClassName,
+  bgcolor
 }) => (
   <TimelineHeadersConsumer>
     {({ leftSidebarWidth, rightSidebarWidth, registerScroll }) => {
@@ -121,6 +124,7 @@ const TimelineHeadersWrapper = ({
           rightSidebarWidth={rightSidebarWidth}
           registerScroll={registerScroll}
           style={style}
+          bgcolor={bgcolor}
           className={className}
           calendarHeaderStyle={calendarHeaderStyle}
           calendarHeaderClassName={calendarHeaderClassName}
@@ -136,6 +140,7 @@ TimelineHeadersWrapper.propTypes = {
   style: PropTypes.object,
   children: PropTypes.node,
   className: PropTypes.string,
+  bgcolor: PropTypes.string,
   calendarHeaderStyle: PropTypes.object,
   calendarHeaderClassName: PropTypes.string
 }
