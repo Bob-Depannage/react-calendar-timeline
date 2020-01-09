@@ -2,8 +2,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import moment from 'moment'
 
-moment.locale('fr');
-
 import Items from './items/Items'
 import Sidebar from './layout/Sidebar'
 import Columns from './columns/Columns'
@@ -34,6 +32,11 @@ import { TimelineHeadersProvider } from './headers/HeadersContext'
 import TimelineHeaders from './headers/TimelineHeaders'
 import DateHeader from './headers/DateHeader'
 import SidebarHeader from './headers/SidebarHeader'
+
+import "moment/locale/fr";
+
+moment.locale('fr');
+moment.lang('fr');
 
 export default class ReactCalendarTimeline extends Component {
   static propTypes = {
