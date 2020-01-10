@@ -93,7 +93,12 @@ class TimelineHeaders extends React.Component {
         {leftSidebarHeader}
         <div
           ref={this.props.registerScroll}
-          style={this.getCalendarHeaderStyle()}
+          style={Object.assign(this.getCalendarHeaderStyle(), {
+            background: 'white',
+            border: '1px solid #bbbbbb',
+            borderTop: 0,
+            borderLeft: 0
+          })}
           className={classNames(
             'rct-calendar-header',
             this.props.calendarHeaderClassName

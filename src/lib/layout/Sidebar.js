@@ -46,7 +46,7 @@ export default class Sidebar extends Component {
     }
 
     const groupsStyle = {
-      width: `${width}px`
+      width
     }
 
     let groupLines = this.props.groups.map((group, index) => {
@@ -75,10 +75,10 @@ export default class Sidebar extends Component {
 
     return (
       <div
-        className={'rct-sidebar' + (isRightSidebar ? ' rct-sidebar-right' : '')}
+        className={'rct-sidebar bobscroll' + (isRightSidebar ? ' rct-sidebar-right' : '')}
         style={sidebarStyle}
       >
-        <div style={groupsStyle}>{groupLines}</div>
+        <div style={Object.assign(groupsStyle, { width: groupsStyle.width * 2 })}>{groupLines}</div>
       </div>
     )
   }
