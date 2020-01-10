@@ -94,7 +94,6 @@ class TimelineHeaders extends React.Component {
         <div
           ref={this.props.registerScroll}
           style={Object.assign(this.getCalendarHeaderStyle(), {
-            background: 'white',
             border: '1px solid #bbbbbb',
             borderTop: 0,
             borderLeft: 0
