@@ -87,6 +87,9 @@
       "jest-watch-typeahead/testname"
     ]
   },
+  "resolutions": {
+    "moment": "2.24.0"
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "create-react-context": "^0.2.2",
