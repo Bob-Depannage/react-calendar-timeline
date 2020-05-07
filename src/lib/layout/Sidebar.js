@@ -78,7 +78,7 @@ export default class Sidebar extends Component {
         className={'rct-sidebar bobscrollMini' + (isRightSidebar ? ' rct-sidebar-right' : '')}
         style={sidebarStyle}
       >
-        <div style={Object.assign(groupsStyle, { width: groupsStyle.width * 2 })}>{groupLines}</div>
+        <div style={Object.assign(groupsStyle, { width: groupsStyle.width })}>{groupLines}</div>
       </div>
     )
   }
