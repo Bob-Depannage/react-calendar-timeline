@@ -25,6 +25,7 @@ $weekend: rgba(250, 246, 225, 0.5);
     display: block;
     overflow: hidden;
     white-space: nowrap;
+    padding-top: 62px;
   }
 
   .rct-scroll {
@@ -154,6 +155,8 @@ $weekend: rgba(250, 246, 225, 0.5);
   .rct-header-root {
     background: #c52020;
     border-bottom: 1px solid #bbb;
+    position: fixed;
+    z-index: 100;
   }
 
   .rct-calendar-header {
