@@ -84,7 +84,6 @@ class TimelineHeaders extends React.Component {
     }
     
     return (<>
-      <div style={{ height: 62 }}></div>
       <div
         ref={this.handleRootRef}
         data-testid="headerRootDiv"
@@ -109,6 +108,7 @@ class TimelineHeaders extends React.Component {
         </div>
         {rightSidebarHeader}
       </div>
+      <div style={{ height: 62 }}></div>
     </>)
   }
 }
